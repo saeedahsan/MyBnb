@@ -34,3 +34,5 @@ With MyBnB, you can become a host or renter and either create listings and put t
 `rank_renters_bookings_city_report`: Rank renters by the number of bookings they’ve done in a specified date range per city.<br>
 `most_cancellations_report`: Get hosts and renters with the most cancellations within a year.<br>
 `exit`: Exit the application.
+
+If you want to quickly start playing around with actual data, run the SQL script to insert several hosts, renters, listings and other data in the database. 
