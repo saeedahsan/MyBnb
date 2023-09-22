@@ -2,7 +2,7 @@
 MyBnb is a CLI app that mimicks the functionalities of Airbnb's website, including creating and renting listings, commenting on listings and users, and search and filter functionalities. The database is implemented using MySQL, while the entire project is created using Java.
 
 ## How to Use This Application
-With MyBnB, you can become a host or renter and either create listings and put them up for rent or rent the listings themselves. Using the command line, you can sign up, sign in, create listings, update availability, rent properties and comment on other users and listings. In addition, you can also search for properties and see different reports on the application’s users, listings and bookings. Of course, you will need to be signed in as either a host or renter in order to use some of these features. Below is a list of commands you can run, and what their functions are.
+With MyBnB, you can become a host or renter and either create listings and put them up for rent or rent the listings themselves. Using the command line, you can sign up, sign in, create listings, update availability, rent properties and comment on other users and listings. In addition, you can also search for properties and see different reports on the application’s users, listings and bookings. Of course, you will need to be signed in as either a host or renter in order to use some of these features. Below is a list of commands you can run, what their functions are, and whether you need to be signed in to use them.
 
 `create_host`: Create a host account.<br>
 `create_renter`: Create a renter account.<br>
