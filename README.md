@@ -35,4 +35,4 @@ With MyBnB, you can become a host or renter and either create listings and put t
 `most_cancellations_report`: Get hosts and renters with the most cancellations within a year.<br>
 `exit`: Exit the application.
 
-Note: If you want to quickly start playing around with actual data, run the SQL script to insert several hosts, renters, listings and other data in the database. 
+If you want to quickly start playing around with actual data, run the SQL script to insert several hosts, renters, listings and other data in the database. 
