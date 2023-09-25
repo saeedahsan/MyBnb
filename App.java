@@ -13,20 +13,18 @@ public class App {
 	private static final String CONNECTION = "jdbc:mysql://127.0.0.1/";
 
     public static void main(String[] args) throws Exception {
-        //Register JDBC driver
 		Class.forName(dbClassName);
-		//Database credentials
+		//Database credentials - Change this to locally configured MySQL username and password
 		final String USER = "root";
 		final String PASS = "";
 
         try {
-            //Establish connection with MySQL
+            		//Establish connection with MySQL
 			Connection conn = DriverManager.getConnection(CONNECTION,USER,PASS);
 			
 			//Create database
 			Statement stmt = conn.createStatement();
 			String dbName = "mybnb";
-			// ResultSet rs = stmt.executeQuery(sql);
 			stmt.executeUpdate("CREATE DATABASE IF NOT EXISTS " + dbName);
 			stmt.close();
 			conn.close();
@@ -424,6 +422,7 @@ public class App {
         }
     }
 
+	// Methods for various functionalities
 	 static void createHost(Connection conn, Scanner cmdScanner) {
 		String userCmd = "";
 		System.out.println("Please enter your SIN:");
@@ -438,10 +437,10 @@ public class App {
 		System.out.println("Please enter your birth date (YYYY-MM-DD):");
 		userCmd = cmdScanner.nextLine();
 		String birthDate = userCmd;
-        LocalDate birthDateDate = LocalDate.parse(birthDate, DateTimeFormatter.ISO_DATE);
-        LocalDate currentDate = LocalDate.now();
-        Period age = Period.between(birthDateDate, currentDate);
-        if (age.getYears() < 18) {
+	        LocalDate birthDateDate = LocalDate.parse(birthDate, DateTimeFormatter.ISO_DATE);
+	        LocalDate currentDate = LocalDate.now();
+	        Period age = Period.between(birthDateDate, currentDate);
+	        if (age.getYears() < 18) {
 			System.out.println("You must be at least 18 years old to create an account!");
 			return;
 		}
@@ -481,7 +480,7 @@ public class App {
 			System.out.println("Host created successfully!");
 		} catch (SQLException e) {
 			System.err.println("Error creating host!");
-            System.out.println(e);
+            		System.out.println(e);
 		}
 	}
 
@@ -546,7 +545,7 @@ public class App {
 			System.out.println("Renter created successfully!");
 		} catch (SQLException e) {
 			System.err.println("Error creating renter!");
-            System.out.println(e);
+            		System.out.println(e);
 		}
 	}
 
